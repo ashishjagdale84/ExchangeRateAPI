@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  assignmentapi:
+    image: ${DOCKER_REGISTRY}assignmentapi
+    build:
+      context: .\AssignmentApi
+      dockerfile: Dockerfile

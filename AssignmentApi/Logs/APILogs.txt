@@ -1,0 +1,231 @@
+2018-11-18 16:50:33,259  INFO AssignmentApi.WebApiApplication.Application_Start [22] - MESSAGE: Application - Main is invoked
+ 2018-11-18 18:34:59,125  INFO AssignmentApi.WebApiApplication.Application_Start [15] - MESSAGE: Application - Main is invoked
+ 2018-11-18 18:45:18,560  INFO AssignmentApi.WebApiApplication.Application_Start [15] - MESSAGE: Application - Main is invoked
+ 2018-11-18 18:55:35,540  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 18:55:54,454 ERROR AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateHistory [25] - MESSAGE: GetExchangeRateHistory failed to serve the results
+ System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateHistory>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 20
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.GetExchangeRateStatistics(String startDate, String endDate, String baseCurrency, String targetCurrency) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 40
+   at AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateHistory(ExchangeRateInput exchangeRateInput) in C:\Users\ajax6r\source\repos\AssignmentApi\AssignmentApi\Controllers\ExchangeRateController.cs:line 25
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateHistory>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 20<---
+
+2018-11-18 19:01:19,566  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:02:00,821  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:02:38,741  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:04:51,415  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:06:38,006  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:10:25,398  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:12:30,639  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:18:06,246  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:19:07,970  INFO AssignmentApi.WebApiApplication.Application_Start [17] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:20:40,317 ERROR AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateForMultipleDates [46] - MESSAGE: GetExchangeRateForMultipleDates failed to serve the results
+ System.AggregateException: One or more errors occurred. ---> System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Parallel.ForWorker[TLocal](Int32 fromInclusive, Int32 toExclusive, ParallelOptions parallelOptions, Action`1 body, Action`2 bodyWithState, Func`4 bodyWithLocal, Func`1 localInit, Action`1 localFinally)
+   at System.Threading.Tasks.Parallel.For(Int32 fromInclusive, Int32 toExclusive, ParallelOptions parallelOptions, Action`2 body)
+   at BusinessAPI.ExchangeRateBusiness.GetExchangeRateFoDateSetStatistics(String commaSeparatedDates, String baseCurrency, String targetCurrency) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 49
+   at AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateForMultipleDates(ExchangeRateSelectedDatesInput exchangeRateInput) in C:\Users\ajax6r\source\repos\AssignmentApi\AssignmentApi\Controllers\ExchangeRateController.cs:line 46
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31<---
+<---
+
+---> (Inner Exception #1) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31<---
+<---
+
+2018-11-18 19:21:17,748 ERROR AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateForMultipleDates [46] - MESSAGE: GetExchangeRateForMultipleDates failed to serve the results
+ System.AggregateException: One or more errors occurred. ---> System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Parallel.ForWorker[TLocal](Int32 fromInclusive, Int32 toExclusive, ParallelOptions parallelOptions, Action`1 body, Action`2 bodyWithState, Func`4 bodyWithLocal, Func`1 localInit, Action`1 localFinally)
+   at System.Threading.Tasks.Parallel.For(Int32 fromInclusive, Int32 toExclusive, ParallelOptions parallelOptions, Action`2 body)
+   at BusinessAPI.ExchangeRateBusiness.GetExchangeRateFoDateSetStatistics(String commaSeparatedDates, String baseCurrency, String targetCurrency) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 49
+   at AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateForMultipleDates(ExchangeRateSelectedDatesInput exchangeRateInput) in C:\Users\ajax6r\source\repos\AssignmentApi\AssignmentApi\Controllers\ExchangeRateController.cs:line 46
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31<---
+<---
+
+---> (Inner Exception #1) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31<---
+<---
+
+2018-11-18 19:22:21,518  INFO AssignmentApi.WebApiApplication.InvokeMethod [0] - MESSAGE: Application - Main is invoked
+ 2018-11-18 19:22:32,143 ERROR AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateForMultipleDates [45] - MESSAGE: GetExchangeRateForMultipleDates failed to serve the results
+ System.AggregateException: One or more errors occurred. ---> System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Parallel.ForWorker[TLocal](Int32 fromInclusive, Int32 toExclusive, ParallelOptions parallelOptions, Action`1 body, Action`2 bodyWithState, Func`4 bodyWithLocal, Func`1 localInit, Action`1 localFinally)
+   at System.Threading.Tasks.Parallel.For(Int32 fromInclusive, Int32 toExclusive, ParallelOptions parallelOptions, Action`2 body)
+   at BusinessAPI.ExchangeRateBusiness.GetExchangeRateFoDateSetStatistics(String commaSeparatedDates, String baseCurrency, String targetCurrency) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 75
+   at AssignmentApi.Controllers.ExchangeRateController.GetExchangeRateForMultipleDates(ExchangeRateSelectedDatesInput exchangeRateInput) in C:\Users\ajax6r\source\repos\AssignmentApi\AssignmentApi\Controllers\ExchangeRateController.cs:line 45
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31<---
+<---
+
+---> (Inner Exception #1) System.AggregateException: One or more errors occurred. ---> System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31
+   --- End of inner exception stack trace ---
+   at BusinessAPI.ExchangeRateBusiness.<>c__DisplayClass1_0.<GetExchangeRateFoDateSetStatistics>b__0(Int32 i, ParallelLoopState state) in C:\Users\ajax6r\source\repos\AssignmentApi\BusinessAPI\ExchangeRateBusiness.cs:line 71
+   at System.Threading.Tasks.Parallel.<>c__DisplayClass17_0`1.<ForWorker>b__1()
+   at System.Threading.Tasks.Task.InnerInvokeWithArg(Task childTask)
+   at System.Threading.Tasks.Task.<>c__DisplayClass176_0.<ExecuteSelfReplicating>b__0(Object )
+---> (Inner Exception #0) System.Net.WebException: The remote server returned an error: (400) Bad Request.
+   at System.Net.HttpWebRequest.GetResponse()
+   at ServiceAccess.RestRequestHelper.<Get>d__0.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\RestRequestHelper.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ServiceAccess.ExchangeRateService.ExchangeRateService.<GetExchangeRateForSelectedDate>d__1.MoveNext() in C:\Users\ajax6r\source\repos\AssignmentApi\ServiceAccess\ExchangeRateService\ExchangeRateService.cs:line 31<---
+<---
+
